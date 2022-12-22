@@ -79,7 +79,7 @@ public class ProductController {
 	    //Get Products records by page
 	    @GetMapping("/getbypage")
 	    public ResponseEntity<List<Product>> getProducts() throws ProductNotFoundException {
-			org.springframework.data.domain.Pageable pageable = PageRequest.of(0, 7);
+			org.springframework.data.domain.Pageable pageable = PageRequest.of(0, 5);
 			List<Product> list = productRepository.findProducts(pageable);
 			
 			if(list.size()<=0) {
