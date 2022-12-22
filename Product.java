@@ -17,11 +17,11 @@ import javax.persistence.Table;
 public class Product {
 	
 	@Id
-	@Column(name = "Product_Number", nullable = false, length = 11)
+	@Column(name = "Product_Number", nullable = false, length = 20)
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	
-	@Column(name = "Product_name", nullable = false, length = 50)
+	@Column(name = "Product_name", nullable = false, length = 40)
 	private String name;
 	
 	@Column(name = "Product_price")
