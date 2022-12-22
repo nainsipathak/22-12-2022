@@ -14,7 +14,7 @@ public interface CategoryRepository extends JpaRepository<Category, Integer> {
 	@Query(value = "SELECT * FROM Categories  WHERE category_name = ?",nativeQuery=true)
 	public Category getByName(String name);
 	
-	@Query(value = "SELECT * FROM Categories  WHERE category_name like 'Foo%'",nativeQuery=true)
+	@Query(value = "SELECT * FROM Categories  WHERE category_name like 'Bis%'",nativeQuery=true)
 	public List<Category> getByNames(String name);
 	
 	@Query(value = "SELECT c FROM Category c ORDER BY name")
