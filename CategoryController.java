@@ -79,7 +79,7 @@ public class CategoryController {
 	    //Get Category records by page
 	    @GetMapping("/getbypage")
 	    public ResponseEntity<List<Category>> getCategories() throws CategoryNotFoundException {
-			org.springframework.data.domain.Pageable pageable = PageRequest.of(0, 4);
+			org.springframework.data.domain.Pageable pageable = PageRequest.of(0, 3);
 			List<Category> list = categoryRepository.findCategories(pageable);
 			
 			if(list.size()<=0) {
