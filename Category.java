@@ -17,14 +17,14 @@ import javax.persistence.Table;
 public class Category {
 	
 	@Id
-	@Column(name = "category_Number", nullable = false, length = 11)
+	@Column(name = "category_Number", nullable = false, length = 20)
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
 	
-	@Column(name = "category_name", nullable = false, length = 50)
+	@Column(name = "category_name", nullable = false, length = 40)
 	private String name;
 	
-	@Column(name = "text_Description",nullable = false, length = 100)
+	@Column(name = "text_Description",nullable = false, length = 150)
 	private String description;
 	
 	@OneToMany(fetch=FetchType.EAGER ,mappedBy ="category",cascade= CascadeType.ALL)
